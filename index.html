@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Daily Self Check</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: #d32c2c;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    .box {
+        background: #6cebfe;
+        padding: 25px;
+        border-radius: 10px;
+        width: 320px;
+        text-align: center;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    h2 {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+    button {
+        width: 100%;
+        padding: 10px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 6px;
+        font-size: 15px;
+        cursor: pointer;
+    }
+    .no { background: #f44336; color: white; }
+    .yes { background: #4CAF50; color: white; }
+    .more { background: #ff9800; color: white; }
+    #result {
+        margin-top: 15px;
+        font-weight: bold;
+    }
+</style>
+</head>
+<body>
+
+<div class="box">
+    <h2>**Aaj Muth(masterpassion) Mara** </h2>
+
+    <button class="no" onclick="answer('❌ Nahi mara aj')">❌ Nahi</button>
+    <button class="yes" onclick="answer('✅ Haan (1 baar)')">✅ Haan (1 baar)</button>
+    <button class="more" onclick="answer('⚠️ Zyada baar')">⚠️ Zyada baar</button>
+
+    <div id="result"></div>
+</div>
+
+<script>
+function answer(text) {
+    document.getElementById("result").innerText = "Aaj ka result: " + text;
+}
+</script>
+
+</body>
+</html>
+
